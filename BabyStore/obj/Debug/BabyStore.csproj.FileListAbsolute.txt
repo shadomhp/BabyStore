@@ -94,3 +94,7 @@ F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\Microsoft.AI.Web.xml
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.csprojResolveAssemblyReference.cache
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.dll
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.pdb
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.InitialDatabase.resources
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.csproj.GenerateResource.Cache
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.CategoryNameValidation.resources
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.ProductValidation.resources

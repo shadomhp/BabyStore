@@ -26,6 +26,7 @@ namespace BabyStore.ViewModels
                 return allCats;
             }
         }
+
     }
 
     public class CategoryWithCount
