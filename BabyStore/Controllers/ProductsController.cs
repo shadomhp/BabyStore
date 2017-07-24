@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using BabyStore.DAL;
 using BabyStore.Models;
 using BabyStore.ViewModels;
+using PagedList;
 
 namespace BabyStore.Controllers
 {
@@ -17,7 +18,7 @@ namespace BabyStore.Controllers
         private StoreContext db = new StoreContext();
 
         // GET: Products
-        public ActionResult Index(string category, string search)
+        public ActionResult Index(string category, string search, string sortBy, int? page)
         {
             //Instantiate a new view model
             ProductIndexViewModel viewModel = new ProductIndexViewModel();
@@ -47,9 +48,33 @@ namespace BabyStore.Controllers
             if (!String.IsNullOrEmpty(category))
             {
                 products = products.Where(p => p.Category.Name == category);
+                viewModel.Category = category;
             }
 
-            viewModel.Products = products;
+            //sort the results
+            switch (sortBy)
+            {
+                case "price_lowest":
+                    products = products.OrderBy(p => p.Price);
+                    break;
+                case "price_highest":
+                    products = products.OrderByDescending(p => p.Price);
+                    break;
+                default:
+                    products = products.OrderBy(p => p.Name);
+                    break;
+            }
+
+            const int PageItems = 3;
+            int currentPage = (page ?? 1);  //?? significa Null-coalescing -> Se o primeiro operando (page) é nulo, o resultado da expressão será o segundo (1). Caso contrario será o primeiro (page)
+                                            //mesmo que int currentPage = (page == null) ? 1 : page;  -> Operador ternário condição ? expressão1_se_true : expressão2_se_false
+            viewModel.Products = products.ToPagedList(currentPage, PageItems);
+            viewModel.SortBy = sortBy;
+            viewModel.Sorts = new Dictionary<string, string>
+            {
+                {"Price low to hight","price_lowest" },
+                {"Price high to low", "price_highest" }
+            };
             return View(viewModel);
         }
 
