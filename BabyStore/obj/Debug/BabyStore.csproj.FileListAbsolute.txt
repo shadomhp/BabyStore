@@ -98,3 +98,8 @@ F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migratio
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.csproj.GenerateResource.Cache
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.dll
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.pdb
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.csprojResolveAssemblyReference.cache
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.dll
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.Mvc.dll
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.xml
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.Mvc.xml
