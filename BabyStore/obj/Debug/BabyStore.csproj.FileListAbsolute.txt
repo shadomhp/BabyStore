@@ -98,4 +98,3 @@ F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migratio
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.csproj.GenerateResource.Cache
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.dll
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.pdb
-F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.csprojResolveAssemblyReference.cache
