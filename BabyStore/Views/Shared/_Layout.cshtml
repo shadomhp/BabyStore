@@ -25,9 +25,15 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Shop by Category","Index", "Categories")</li>
-                    <li>@Html.ActionLink("View all our Products", "Index","Products")</li>
+                    <li>@Html.RouteLink("View all our Products", "ProductsIndex")</li>]
+                    <!--<li>@Html.RouteLink("View all Clothes","ProductsbyCategory", new { category = "Clothes" })</li>  // Esta linha mostra como inicializar filtrado por alguma categoria
+                        
+                        
+                        
+                        -->
+
                 </ul>
-                @using (Html.BeginForm("Index", "Products", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+                @using (Html.BeginRouteForm("ProductsIndex", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
                 {
                     <div class="form-group">
                         @Html.TextBox("Search",null, new { @class = "form-control", @placeholder = "Search Products"})
