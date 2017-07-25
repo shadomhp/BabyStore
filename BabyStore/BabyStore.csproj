@@ -199,6 +199,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductImagesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="DAL\StoreContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -219,6 +220,10 @@
     <Compile Include="Migrations\201707242219383_ProductImages.cs" />
     <Compile Include="Migrations\201707242219383_ProductImages.Designer.cs">
       <DependentUpon>201707242219383_ProductImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707250450448_UniqueFileName.cs" />
+    <Compile Include="Migrations\201707250450448_UniqueFileName.Designer.cs">
+      <DependentUpon>201707250450448_UniqueFileName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -318,6 +323,11 @@
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Scripts\methods_pt_br.js" />
+    <Content Include="Views\ProductImages\Upload.cshtml" />
+    <Content Include="Views\ProductImages\Delete.cshtml" />
+    <Content Include="Views\ProductImages\Details.cshtml" />
+    <Content Include="Views\ProductImages\Edit.cshtml" />
+    <Content Include="Views\ProductImages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -350,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707242219383_ProductImages.resx">
       <DependentUpon>201707242219383_ProductImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707250450448_UniqueFileName.resx">
+      <DependentUpon>201707250450448_UniqueFileName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
