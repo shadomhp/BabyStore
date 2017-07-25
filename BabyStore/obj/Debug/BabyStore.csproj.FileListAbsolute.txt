@@ -103,3 +103,4 @@ F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.dll
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.Mvc.dll
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.xml
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.Mvc.xml
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.ProductImages.resources

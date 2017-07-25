@@ -65,10 +65,10 @@ namespace BabyStore.Controllers
                     break;
             }
 
-            const int PageItems = 3;
+            //const int PageItems = 3;
             int currentPage = (page ?? 1);  //?? significa Null-coalescing -> Se o primeiro operando (page) é nulo, o resultado da expressão será o segundo (1). Caso contrario será o primeiro (page)
                                             //mesmo que int currentPage = (page == null) ? 1 : page;  -> Operador ternário condição ? expressão1_se_true : expressão2_se_false
-            viewModel.Products = products.ToPagedList(currentPage, PageItems);
+            viewModel.Products = products.ToPagedList(currentPage, Constants.PageItems);
             viewModel.SortBy = sortBy;
             viewModel.Sorts = new Dictionary<string, string>
             {
