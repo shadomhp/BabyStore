@@ -11,6 +11,7 @@ using BabyStore.Models;
 using System.Web.Helpers;
 using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace BabyStore.Controllers
 {
@@ -54,6 +55,7 @@ namespace BabyStore.Controllers
         {
             bool allValid = true;
             string inValidFiles = "";
+            db.Database.Log = sql => Trace.WriteLine(sql); // Gera o codigo SQL no console para debug
             //check the user has entered a file
             if (files[0] != null)
             {

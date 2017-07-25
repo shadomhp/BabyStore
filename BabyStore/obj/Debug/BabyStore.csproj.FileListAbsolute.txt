@@ -105,3 +105,4 @@ F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.xml
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\bin\PagedList.Mvc.xml
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.ProductImages.resources
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.UniqueFileName.resources
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.CreateProductImageMappings.resources
