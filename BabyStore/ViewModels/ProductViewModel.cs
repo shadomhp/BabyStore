@@ -28,7 +28,7 @@ namespace BabyStore.ViewModels
 
         [Display(Name ="Category")]
         public int CategoryID { get; set; }
-        public SelectList CategoryLists { get; set; }
+        public SelectList CategoryList { get; set; }
         public List<SelectList> ImageLists { get; set; }
         public string[] ProductImages { get; set; }
 
