@@ -107,3 +107,4 @@ F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migratio
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.UniqueFileName.resources
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.CreateProductImageMappings.resources
 F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.CorrigindoProductViewModel.resources
+F:\Git\repository\BookAspNetMVC\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.MudancasNomesErrados.resources

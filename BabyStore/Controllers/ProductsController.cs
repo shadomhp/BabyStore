@@ -160,7 +160,7 @@ namespace BabyStore.Controllers
             viewModel.ImageLists = new List<SelectList>();
             foreach (var imageMapping in product.ProductIMageMappings.OrderBy(pim => pim.ImageNumber))
             {
-                viewModel.ImageLists.Add(new SelectList(db.ProductImages, "ID", "FileName", imageMapping.ProductImageId));
+                viewModel.ImageLists.Add(new SelectList(db.ProductImages, "ID", "FileName", imageMapping.ProductImageID));
             }
             for (int i = viewModel.ImageLists.Count; i < Constants.NumberOfProductImages; i++)
             {
@@ -203,14 +203,14 @@ namespace BabyStore.Controllers
                         {
                             ImageNumber = i,
                             ProductImage = image,
-                            ProductImageId = image.ID
+                            ProductImageID = image.ID
                         });
                     }
                     //else it's not a new file so edit the current mapping
                     else
                     {
                         //if they are not the same
-                        if (imageMappingToEdit.ProductImageId != int.Parse(productImages[i]))
+                        if (imageMappingToEdit.ProductImageID != int.Parse(productImages[i]))
                         {
                             //assign image property of the image mapping
                             imageMappingToEdit.ProductImage = image;
