@@ -9,6 +9,7 @@ using System.Net;
 using BabyStore.Models;
 using BabyStore.ViewModels;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity;
 
 namespace BabyStore.Controllers
 {
@@ -138,25 +139,45 @@ namespace BabyStore.Controllers
         }
 
         // GET: RolesAdmin/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(string id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var role = await RoleManager.FindByIdAsync(id);
+            if (role == null)
+            {
+                return HttpNotFound();
+            }
+            return View(role);
         }
 
         // POST: RolesAdmin/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> DeleteConfirmed(string id)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add delete logic here
-
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                var role = await RoleManager.FindByIdAsync(id);
+                if (role == null)
+                {
+                    return HttpNotFound();
+                }
+                IdentityResult result = await RoleManager.DeleteAsync(role);
+                if (!result.Succeeded)
+                {
+                    ModelState.AddModelError("", result.Errors.First());
+                    return View();
+                }
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View();
         }
     }
 }
