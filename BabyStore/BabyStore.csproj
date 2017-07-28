@@ -347,11 +347,12 @@
     <Content Include="Views\ProductImages\Index.cshtml" />
     <Content Include="Views\Error\FileUploadLimitExceeded.cshtml" />
     <Content Include="Views\Shared\_ProductEditCreatePartial.cshtml" />
+    <Content Include="Views\RolesAdmin\Index.cshtml" />
+    <Content Include="Views\RolesAdmin\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\ProductImages\Thumbnails\" />
-    <Folder Include="Views\RolesAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
