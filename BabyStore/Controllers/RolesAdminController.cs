@@ -7,6 +7,8 @@ using Microsoft.AspNet.Identity.Owin;
 using System.Threading.Tasks;
 using System.Net;
 using BabyStore.Models;
+using BabyStore.ViewModels;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BabyStore.Controllers
 {
@@ -88,18 +90,20 @@ namespace BabyStore.Controllers
 
         // POST: RolesAdmin/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public async Task<ActionResult> Create(RoleViewModel roleViewModel)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                var role = new IdentityRole(roleViewModel.Name);
+                var roleresult = await RoleManager.CreateAsync(role);
+                if (!roleresult.Succeeded)
+                {
+                    ModelState.AddModelError("", roleresult.Errors.First());
+                    return View();
+                }
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View();
         }
 
         // GET: RolesAdmin/Edit/5
